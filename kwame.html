@@ -1,70 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delivery Dash</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
-      padding: 2em;
-      margin: 0;
-      color: #333; /* Ensures all text is visible */
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: #fff;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #007acc;
-    }
-
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1em;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .bio {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #333; /* Explicit text color */
-    }
-
-    a.back-link {
-      display: inline-block;
-      margin-top: 2em;
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
-
-    a.back-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
 </head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans">
 
-<body>
-  <div class="container">
-    <h1>Delivery Dash</h1>
-    <img src="images/download.png" alt="Neema" class="profile-pic" />
-    <p class="bio">
-      Delivery Dash
-      Delivery Dash is an app that helps delivery drivers scroll through all the pending orders on all the delivery apps in their region. The driver can customize prefrences like order distance amounts and the type of orders. 
-    </p>
-    
-    <a class="back-link" href="index.html">← Back to Home</a>
+  <!-- dark mode button -->
+  <div class="flex justify-end p-4">
+    <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full hover:scale-105 transition">
+      Toggle Dark 🌗
+    </button>
   </div>
+
+  <section class="text-center py-20 px-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-4">Delivery Dash</h1>
+    <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
+      Fast. Reliable. On the Move. Your all-in-one delivery driver dashboard.
+    </p>
+    <a href="#features" class="bg-indigo-600 text-white px-6 py-3 rounded-full text-lg hover:bg-indigo-700 transition">
+      Explore Features
+    </a>
+  </section>
+
+  <section id="features" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">App Features</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">🚗 Real-Time Order Management</h3>
+        <p class="text-gray-700 dark:text-gray-300">View, accept, or decline delivery orders instantly.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">📍 Smart Navigation</h3>
+        <p class="text-gray-700 dark:text-gray-300">Get routes, traffic data, and estimated arrival times.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">⚙️ Customizable Dashboard</h3>
+        <p class="text-gray-700 dark:text-gray-300">Switch themes, personalize settings, and stay in control.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">📊 Performance Insights</h3>
+        <p class="text-gray-700 dark:text-gray-300">Track tips, deliveries, ratings, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-indigo-600 dark:bg-indigo-700 text-white py-20 text-center px-6">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Dash?</h2>
+  <p class="mb-6 text-lg">Start your journey with Delivery Dash and master every delivery.</p>
+  <a href="#" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition">
+    Download Now
+  </a>
+
+  <img 
+    src="images/Screenshot 2025-07-21 120530.png" 
+    alt="Delivery Dash Preview"
+    class="h-54 w-auto mx-auto mt-12"
+  />
+</section>
+
+
+
+  <footer class="bg-gray-100 dark:bg-gray-800 text-center text-gray-600 dark:text-gray-300 py-6">
+    &copy; 2025 Delivery Dash. All rights reserved.
+  </footer>
+
+  <!-- dark mode code -->
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+
 </body>
-  <img src="" alt="">
 </html>
